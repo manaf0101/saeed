@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>پرسشنامه طرحواره یانگ</title>
+    <style>
+
+
+
+    body {
+    font-family: 'Vazir';
+    background: linear-gradient(to bottom, #fdfbfb, #ebedee);
+    color: #333;
+    padding: 30px;
+    max-width: 960px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #7f8c8d;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.instructions {
+    background-color: #f1f9ff;
+    padding: 15px;
+    border-radius: 8px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    border-right: 5px solid #3498db;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 25px;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex: 1 1 250px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 6px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    direction: rtl;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+th, td {
+    border: 1px solid #dcdde1;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+td {
+    text-align: right;
+    font-weight: normal;
+    background-color: #fdfefe;
+}
+
+tr:nth-child(even) td {
+    background-color: #f6f6f6;
+}
+
+input[type="radio"] {
+    width: 18px;
+    height: 18px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.02);
+}
+
+.print-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+
+.editable-question {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    direction: rtl;
+}
+
+.editable-question.modified {
+    background-color: #ffe6e6;
+    border: 1px solid #e74c3c;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1>روانشناس و مشاور فرزانه حیدری</h1>
+    <h2>پرسشنامه طرحواره یانگ، فرم کوتاه ۹۰ سوالی</h2>
+
+
+    <div class="form-row">
+        <div class="form-group">
+            <label>نام و نام خانوادگی:</label>
+            <input type="text" id="name">
+        </div>
+        <div class="form-group">
+            <label>سن:</label>
+            <input type="number" id="age">
+        </div>
+        <div class="form-group">
+            <label>جنسیت:</label>
+            <select id="gender">
+                <option value="">انتخاب کنید</option>
+                <option>مرد</option>
+                <option>زن</option>
+                <option>دیگر</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>تحصیلات:</label>
+            <input type="text" id="education">
+        </div>
+        <div class="form-group">
+            <label>شغل:</label>
+            <input type="text" id="job">
+        </div>
+    </div>
+
+    <div class="instructions">
+        دستورالعمل: افراد از این جمله‌ها ممکن است برای توصیف خودشان استفاده کنند.
+        لطفاً هر جمله را با دقت بخوانید و ببینید تا چه حد توصیف درستی از شما به دست می‌دهد.
+        اگر شما برای پاسخ دادن خاطر جمع نیستید، بر پایه چیزی که احساس می‌کنید جواب بدهید، نه بر اساس آنچه که فکر می‌کنید درست است.
+           </div>
+
+
+           <div class="instructions">
+            اگر دوست دارید جمله را به گونه‌ای بازنویسی کنید که در مورد شما درست‌تر است، و آنگاه ببینید جمله مذکور چقدر در مورد شما صدق می‌کند.
+
+           </div>
+
+
+    <table>
+        <tr>
+            <th>سوال‌ها</th>
+            <th>کاملاً غلط</th>
+            <th>تقریباً غلط</th>
+            <th>اندکی درست</th>
+            <th>بیشتر درست</th>
+            <th>تقریباً درست</th>
+            <th>کاملاً درست</th>
+        </tr>
+
+        <!-- نمونه ۷ سوال با radio -->
+        <tr>
+            <td>1- اغلب کسی را نداشته ام که از من حمایت کند،حرفهایش را با من بزند و عمیقا نگران اتفاقی باشد که برای من می افتد</td>
+            <td><input type="radio" name="q1" value="1"></td>
+            <td><input type="radio" name="q1" value="2"></td>
+            <td><input type="radio" name="q1" value="3"></td>
+            <td><input type="radio" name="q1" value="4"></td>
+            <td><input type="radio" name="q1" value="5"></td>
+            <td><input type="radio" name="q1" value="6"></td>
+        </tr>
+        <tr>
+        <td>2- من به افراد نزدیک خیلی وابسته ام، چون میترسم که مبادا مرا ترک کنند.</td>
+
+            <td><input type="radio" name="q2" value="1"></td>
+            <td><input type="radio" name="q2" value="2"></td>
+            <td><input type="radio" name="q2" value="3"></td>
+            <td><input type="radio" name="q2" value="4"></td>
+            <td><input type="radio" name="q2" value="5"></td>
+            <td><input type="radio" name="q2" value="6"></td>
+        </tr>
+        <tr>
+        <td>3- احساس میکنم مردم از من سودجویی میکنندا</td>
+            <td><input type="radio" name="q3" value="1"></td>
+            <td><input type="radio" name="q3" value="2"></td>
+            <td><input type="radio" name="q3" value="3"></td>
+            <td><input type="radio" name="q3" value="4"></td>
+            <td><input type="radio" name="q3" value="5"></td>
+            <td><input type="radio" name="q3" value="6"></td>
+        </tr>
+        <tr>
+            <td>4- وصله ناجور جمع هستم</td>
+            <td><input type="radio" name="q4" value="1"></td>
+            <td><input type="radio" name="q4" value="2"></td>
+            <td><input type="radio" name="q4" value="3"></td>
+            <td><input type="radio" name="q4" value="4"></td>
+            <td><input type="radio" name="q4" value="5"></td>
+            <td><input type="radio" name="q4" value="6"></td>
+        </tr>
+        <tr>
+            <td>5- مردان یا زنانی که دوستشان دارم، وقتی عیب های مرا ببینند، نمی توانند دوستم داشته باشند.</td>
+            <td><input type="radio" name="q5" value="1"></td>
+            <td><input type="radio" name="q5" value="2"></td>
+            <td><input type="radio" name="q5" value="3"></td>
+            <td><input type="radio" name="q5" value="4"></td>
+            <td><input type="radio" name="q5" value="5"></td>
+            <td><input type="radio" name="q5" value="6"></td>
+        </tr>
+        <tr>
+            <td>6- تقریبا هیچ کاری را نمیتوانم به خوبی دیگران انجام دهم</td>
+            <td><input type="radio" name="q6" value="1"></td>
+            <td><input type="radio" name="q6" value="2"></td>
+            <td><input type="radio" name="q6" value="3"></td>
+            <td><input type="radio" name="q6" value="4"></td>
+            <td><input type="radio" name="q6" value="5"></td>
+            <td><input type="radio" name="q6" value="6"></td>
+        </tr>
+        <tr>
+            <td>7- احساس میکنم نمیتوانم به تنهایی از پس کارهای زندگی روزمره ام بر بیایم</td>
+            <td><input type="radio" name="q7" value="1"></td>
+            <td><input type="radio" name="q7" value="2"></td>
+            <td><input type="radio" name="q7" value="3"></td>
+            <td><input type="radio" name="q7" value="4"></td>
+            <td><input type="radio" name="q7" value="5"></td>
+            <td><input type="radio" name="q7" value="6"></td>
+        </tr>
+
+
+        <tr>
+            <td>8- نمیتوانم از شر این احساس رها شوم که مبادا اتفاق بدی بیفتد</td>
+            <td><input type="radio" name="q8" value="1"></td>
+            <td><input type="radio" name="q8" value="2"></td>
+            <td><input type="radio" name="q8" value="3"></td>
+            <td><input type="radio" name="q8" value="4"></td>
+            <td><input type="radio" name="q8" value="5"></td>
+            <td><input type="radio" name="q8" value="6"></td>
+        </tr>
+
+
+                <tr>
+            <td>9- قادر نیستم از والدینم جدا شوم، کاری که همسن و سالهایم انجام میدهند</td>
+            <td><input type="radio" name="q9" value="1"></td>
+            <td><input type="radio" name="q9" value="2"></td>
+            <td><input type="radio" name="q9" value="3"></td>
+            <td><input type="radio" name="q9" value="4"></td>
+            <td><input type="radio" name="q9" value="5"></td>
+            <td><input type="radio" name="q9" value="6"></td>
+        </tr>
+
+
+                <tr>
+            <td>10- اعتقاد دارم که اگر بخواهم هر کاری را انجام بدهم، برای خودم دردسر درست میکنم</td>
+            <td><input type="radio" name="q10" value="1"></td>
+            <td><input type="radio" name="q10" value="2"></td>
+            <td><input type="radio" name="q10" value="3"></td>
+            <td><input type="radio" name="q10" value="4"></td>
+            <td><input type="radio" name="q10" value="5"></td>
+            <td><input type="radio" name="q10" value="6"></td>
+        </tr>
+
+
+                <tr>
+            <td>متن</td>
+            <td><input type="radio" name="q" value="1"></td>
+            <td><input type="radio" name="q" value="2"></td>
+            <td><input type="radio" name="q" value="3"></td>
+            <td><input type="radio" name="q" value="4"></td>
+            <td><input type="radio" name="q" value="5"></td>
+            <td><input type="radio" name="q" value="6"></td>
+        </tr>
+
+
+                <tr>
+            <td>11- در نهایت، کار مراقبت از نزدیکانم روی دوش من است</td>
+            <td><input type="radio" name="q11" value="1"></td>
+            <td><input type="radio" name="q11" value="2"></td>
+            <td><input type="radio" name="q11" value="3"></td>
+            <td><input type="radio" name="q11" value="4"></td>
+            <td><input type="radio" name="q11" value="5"></td>
+            <td><input type="radio" name="q11" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>12- از اینکه احساسهای مثبتم( مثل محبت، همدردی) را به دیگران ابراز کنم خیلی خجالت میکشم.</td>
+            <td><input type="radio" name="q12" value="1"></td>
+            <td><input type="radio" name="q12" value="2"></td>
+            <td><input type="radio" name="q12" value="3"></td>
+            <td><input type="radio" name="q12" value="4"></td>
+            <td><input type="radio" name="q12" value="5"></td>
+            <td><input type="radio" name="q12" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>13- باید در هر کاری که انجام میدهم بهترین باشم، نمیتوانم بپذیرم که نفر دوم باشم</td>
+            <td><input type="radio" name="q13" value="1"></td>
+            <td><input type="radio" name="q13" value="2"></td>
+            <td><input type="radio" name="q13" value="3"></td>
+            <td><input type="radio" name="q13" value="4"></td>
+            <td><input type="radio" name="q13" value="5"></td>
+            <td><input type="radio" name="q13" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>14- وقتی از کسی چیزی میخواهم، خیلی برای من سخت است که "نه" بشنوم</td>
+            <td><input type="radio" name="q14" value="1"></td>
+            <td><input type="radio" name="q14" value="2"></td>
+            <td><input type="radio" name="q14" value="3"></td>
+            <td><input type="radio" name="q14" value="4"></td>
+            <td><input type="radio" name="q14" value="5"></td>
+            <td><input type="radio" name="q14" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>15- حوصله انجام کارهای متداول زندگی یا کارهای ملال آور را ندارم</td>
+            <td><input type="radio" name="q15" value="1"></td>
+            <td><input type="radio" name="q15" value="2"></td>
+            <td><input type="radio" name="q15" value="3"></td>
+            <td><input type="radio" name="q15" value="4"></td>
+            <td><input type="radio" name="q15" value="5"></td>
+            <td><input type="radio" name="q15" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>16- ثروت و معاشرت با افراد سرشناس باعث احساس ارزشمندی من میشود</td>
+            <td><input type="radio" name="q16" value="1"></td>
+            <td><input type="radio" name="q16" value="2"></td>
+            <td><input type="radio" name="q16" value="3"></td>
+            <td><input type="radio" name="q16" value="4"></td>
+            <td><input type="radio" name="q16" value="5"></td>
+            <td><input type="radio" name="q16" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>17- حتی زمانی که کارها خوب پیش میرود، احساس میکنم که این حس خوب موقتی است</td>
+            <td><input type="radio" name="q17" value="1"></td>
+            <td><input type="radio" name="q17" value="2"></td>
+            <td><input type="radio" name="q17" value="3"></td>
+            <td><input type="radio" name="q17" value="4"></td>
+            <td><input type="radio" name="q17" value="5"></td>
+            <td><input type="radio" name="q17" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>18- اگر اشتبا کنم باید تنبیه شوم</td>
+            <td><input type="radio" name="q18" value="1"></td>
+            <td><input type="radio" name="q18" value="2"></td>
+            <td><input type="radio" name="q18" value="3"></td>
+            <td><input type="radio" name="q18" value="4"></td>
+            <td><input type="radio" name="q18" value="5"></td>
+            <td><input type="radio" name="q18" value="6"></td>
+        </tr>
+
+
+
+
+                <tr>
+            <td>19-  به طور کلی کسی نبوده که به من عاطفه، محبت و صداقت نشان بدهد</td>
+            <td><input type="radio" name="q19" value="1"></td>
+            <td><input type="radio" name="q19" value="2"></td>
+            <td><input type="radio" name="q19" value="3"></td>
+            <td><input type="radio" name="q19" value="4"></td>
+            <td><input type="radio" name="q19" value="5"></td>
+            <td><input type="radio" name="q19" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>20- آنقدر به مردم نیازمندم که نگران از دست دادن انها هستم</td>
+            <td><input type="radio" name="q20" value="1"></td>
+            <td><input type="radio" name="q20" value="2"></td>
+            <td><input type="radio" name="q20" value="3"></td>
+            <td><input type="radio" name="q20" value="4"></td>
+            <td><input type="radio" name="q20" value="5"></td>
+            <td><input type="radio" name="q20" value="6"></td>
+        </tr>
+
+
+
+                     <tr>
+            <td>21- احساس میکنم در حضور دیگران باید از خودم محافظت کنم، چون در غیر این صورت عمدا به من آسیب میزنند</td>
+            <td><input type="radio" name="q21" value="1"></td>
+            <td><input type="radio" name="q21" value="2"></td>
+            <td><input type="radio" name="q21" value="3"></td>
+            <td><input type="radio" name="q21" value="4"></td>
+            <td><input type="radio" name="q21" value="5"></td>
+            <td><input type="radio" name="q21" value="6"></td>
+        </tr>
+
+
+                <tr>
+            <td>22- اساسا خیلی با دیگران فرق دارم</td>
+            <td><input type="radio" name="q22" value="1"></td>
+            <td><input type="radio" name="q22" value="2"></td>
+            <td><input type="radio" name="q22" value="3"></td>
+            <td><input type="radio" name="q22" value="4"></td>
+            <td><input type="radio" name="q22" value="5"></td>
+            <td><input type="radio" name="q22" value="6"></td>
+        </tr>
+
+
+
+
+                <tr>
+            <td>23- اگر کسی واقعا مرا بشناسد، مایل نیست با من رابطه صمیمی برقرا کند</td>
+            <td><input type="radio" name="q23" value="1"></td>
+            <td><input type="radio" name="q23" value="2"></td>
+            <td><input type="radio" name="q23" value="3"></td>
+            <td><input type="radio" name="q23" value="4"></td>
+            <td><input type="radio" name="q23" value="5"></td>
+            <td><input type="radio" name="q23" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>24- هر زمان پیشرفتی در کارم به وجود آید احساس بی کفایتی میکنم</td>
+            <td><input type="radio" name="q24" value="1"></td>
+            <td><input type="radio" name="q24" value="2"></td>
+            <td><input type="radio" name="q24" value="3"></td>
+            <td><input type="radio" name="q24" value="4"></td>
+            <td><input type="radio" name="q24" value="5"></td>
+            <td><input type="radio" name="q24" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>25- فکر میکنم در انجام کارهای روزمره آدم وابسته ای هستم</td>
+            <td><input type="radio" name="q25" value="1"></td>
+            <td><input type="radio" name="q25" value="2"></td>
+            <td><input type="radio" name="q25" value="3"></td>
+            <td><input type="radio" name="q25" value="4"></td>
+            <td><input type="radio" name="q25" value="5"></td>
+            <td><input type="radio" name="q25" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>26- احساس میکنم هر لحظه ممکن است یک فاجعه طبیعی، جنایی، حقوقی یا پزشکی برای من اتفاق بیفتد</td>
+            <td><input type="radio" name="q26" value="1"></td>
+            <td><input type="radio" name="q26" value="2"></td>
+            <td><input type="radio" name="q26" value="3"></td>
+            <td><input type="radio" name="q26" value="4"></td>
+            <td><input type="radio" name="q26" value="5"></td>
+            <td><input type="radio" name="q26" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>27- من و والدینم تمایل داریم خود را بیش از در زندگی و مسایل دیگران درگیر کنیم</td>
+            <td><input type="radio" name="q27" value="1"></td>
+            <td><input type="radio" name="q27" value="2"></td>
+            <td><input type="radio" name="q27" value="3"></td>
+            <td><input type="radio" name="q27" value="4"></td>
+            <td><input type="radio" name="q27" value="5"></td>
+            <td><input type="radio" name="q27" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>28- احساس میکنم چاره ای ندارم جز اینکه به خواسته های دیگران تن بدهم، چون در غیر اینصورت یا مرا ترک میکنند یا درصدد تلافی بر می ایند</td>
+            <td><input type="radio" name="q28" value="1"></td>
+            <td><input type="radio" name="q28" value="2"></td>
+            <td><input type="radio" name="q28" value="3"></td>
+            <td><input type="radio" name="q28" value="4"></td>
+            <td><input type="radio" name="q28" value="5"></td>
+            <td><input type="radio" name="q28" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>29- آدم خوبی هستم چون بیش از انکه به فکر خودم باشم به فکر دیگرانم</td>
+            <td><input type="radio" name="q29" value="1"></td>
+            <td><input type="radio" name="q29" value="2"></td>
+            <td><input type="radio" name="q29" value="3"></td>
+            <td><input type="radio" name="q29" value="4"></td>
+            <td><input type="radio" name="q29" value="5"></td>
+            <td><input type="radio" name="q29" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>30- از اینکه احساساتم را به دیگران ابراز کنم خیلی شرمسار میشوم</td>
+            <td><input type="radio" name="q30" value="1"></td>
+            <td><input type="radio" name="q30" value="2"></td>
+            <td><input type="radio" name="q30" value="3"></td>
+            <td><input type="radio" name="q30" value="4"></td>
+            <td><input type="radio" name="q30" value="5"></td>
+            <td><input type="radio" name="q30" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>31- سعی میکنم نهایت تلاش خودم را بکنم، خوب بودن نسبی کار هیچگاه من را راضی نمیکند</td>
+            <td><input type="radio" name="q31" value="1"></td>
+            <td><input type="radio" name="q31" value="2"></td>
+            <td><input type="radio" name="q31" value="3"></td>
+            <td><input type="radio" name="q31" value="4"></td>
+            <td><input type="radio" name="q31" value="5"></td>
+            <td><input type="radio" name="q31" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>32- آدم خاصی هستم و نمیتوانم محدودیت هایی را که بر سر راه دیگران وجود دارد بپذیرم</td>
+            <td><input type="radio" name="q32" value="1"></td>
+            <td><input type="radio" name="q32" value="2"></td>
+            <td><input type="radio" name="q32" value="3"></td>
+            <td><input type="radio" name="q32" value="4"></td>
+            <td><input type="radio" name="q32" value="5"></td>
+            <td><input type="radio" name="q32" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>33- اگر به یکی از اهدافم نرسم زود مایوس میشوم و دست از تلاش بر میدارم</td>
+            <td><input type="radio" name="q33" value="1"></td>
+            <td><input type="radio" name="q33" value="2"></td>
+            <td><input type="radio" name="q33" value="3"></td>
+            <td><input type="radio" name="q33" value="4"></td>
+            <td><input type="radio" name="q33" value="5"></td>
+            <td><input type="radio" name="q33" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>34- دستیابی به موفقیت برای من بینهایت ارزشمند است به شرط اینکه دیگران این موفقیت ها را ببینند</td>
+            <td><input type="radio" name="q34" value="1"></td>
+            <td><input type="radio" name="q34" value="2"></td>
+            <td><input type="radio" name="q34" value="3"></td>
+            <td><input type="radio" name="q34" value="4"></td>
+            <td><input type="radio" name="q34" value="5"></td>
+            <td><input type="radio" name="q34" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>35- اگر اتفاق خوبی در زندگی ام بیفتد نگرانم که مبادا بدشانسی از راه برسد</td>
+            <td><input type="radio" name="q35" value="1"></td>
+            <td><input type="radio" name="q35" value="2"></td>
+            <td><input type="radio" name="q35" value="3"></td>
+            <td><input type="radio" name="q35" value="4"></td>
+            <td><input type="radio" name="q35" value="5"></td>
+            <td><input type="radio" name="q35" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>36- اگر سنگ تمام نگذارم بدون شک شکست میخورم</td>
+            <td><input type="radio" name="q36" value="1"></td>
+            <td><input type="radio" name="q36" value="2"></td>
+            <td><input type="radio" name="q36" value="3"></td>
+            <td><input type="radio" name="q36" value="4"></td>
+            <td><input type="radio" name="q36" value="5"></td>
+            <td><input type="radio" name="q36" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>37- در بیشتر اوقات زندگی این احساس به من دست نداد که برای فرد دیگری، شخص ویژه و ممتاز به شمار میروم</td>
+            <td><input type="radio" name="q37" value="1"></td>
+            <td><input type="radio" name="q37" value="2"></td>
+            <td><input type="radio" name="q37" value="3"></td>
+            <td><input type="radio" name="q37" value="4"></td>
+            <td><input type="radio" name="q37" value="5"></td>
+            <td><input type="radio" name="q37" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>38- نگرانم افرادی که دوستشان دارم، فرد دیگری را پیداکنند و او را به من ترجیح بدهند و مرا ترک کنند</td>
+            <td><input type="radio" name="q38" value="1"></td>
+            <td><input type="radio" name="q38" value="2"></td>
+            <td><input type="radio" name="q38" value="3"></td>
+            <td><input type="radio" name="q38" value="4"></td>
+            <td><input type="radio" name="q38" value="5"></td>
+            <td><input type="radio" name="q38" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>39- دیگران دیر یا زود به من خیانت میکنند</td>
+            <td><input type="radio" name="q39" value="1"></td>
+            <td><input type="radio" name="q39" value="2"></td>
+            <td><input type="radio" name="q39" value="3"></td>
+            <td><input type="radio" name="q39" value="4"></td>
+            <td><input type="radio" name="q39" value="5"></td>
+            <td><input type="radio" name="q39" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>40-  نمیتوانم به کسی تعلق خاطر داشته باشم، انسان گوشه گیری هستم</td>
+            <td><input type="radio" name="q40" value="1"></td>
+            <td><input type="radio" name="q40" value="2"></td>
+            <td><input type="radio" name="q40" value="3"></td>
+            <td><input type="radio" name="q40" value="4"></td>
+            <td><input type="radio" name="q40" value="5"></td>
+            <td><input type="radio" name="q40" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>41- لیافت عشق،توجه و احترام دیگران را ندارم</td>
+            <td><input type="radio" name="q41" value="1"></td>
+            <td><input type="radio" name="q41" value="2"></td>
+            <td><input type="radio" name="q41" value="3"></td>
+            <td><input type="radio" name="q41" value="4"></td>
+            <td><input type="radio" name="q41" value="5"></td>
+            <td><input type="radio" name="q41" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>42- بیشتر مردم در حوزه های کار یا تحصیل یا پیشرفت از من توانا تر هستند</td>
+            <td><input type="radio" name="q42" value="1"></td>
+            <td><input type="radio" name="q42" value="2"></td>
+            <td><input type="radio" name="q42" value="3"></td>
+            <td><input type="radio" name="q42" value="4"></td>
+            <td><input type="radio" name="q42" value="5"></td>
+            <td><input type="radio" name="q42" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>43- عقل درست و حسابی ندارم</td>
+            <td><input type="radio" name="q43" value="1"></td>
+            <td><input type="radio" name="q43" value="2"></td>
+            <td><input type="radio" name="q43" value="3"></td>
+            <td><input type="radio" name="q43" value="4"></td>
+            <td><input type="radio" name="q43" value="5"></td>
+            <td><input type="radio" name="q43" value="6"></td>
+        </tr>
+
+
+                <tr>
+            <td>44- نگرانم که مبادا دیگران به من صدمه جسمی بزنند</td>
+            <td><input type="radio" name="q44" value="1"></td>
+            <td><input type="radio" name="q44" value="2"></td>
+            <td><input type="radio" name="q44" value="3"></td>
+            <td><input type="radio" name="q44" value="4"></td>
+            <td><input type="radio" name="q44" value="5"></td>
+            <td><input type="radio" name="q44" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>45- اگر من و والدینم مسایل جزیی و خصوص خود را از یکدیگر پنهان کنیم احساس گناه یا خیانت میکنیم</td>
+            <td><input type="radio" name="q45" value="1"></td>
+            <td><input type="radio" name="q45" value="2"></td>
+            <td><input type="radio" name="q45" value="3"></td>
+            <td><input type="radio" name="q45" value="4"></td>
+            <td><input type="radio" name="q45" value="5"></td>
+            <td><input type="radio" name="q45" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>46- در روابطم به دیگران اجازه میدهم که بر من مسلط شوند</td>
+            <td><input type="radio" name="q46" value="1"></td>
+            <td><input type="radio" name="q46" value="2"></td>
+            <td><input type="radio" name="q46" value="3"></td>
+            <td><input type="radio" name="q46" value="4"></td>
+            <td><input type="radio" name="q46" value="5"></td>
+            <td><input type="radio" name="q46" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>47- از بس که سرگرم انجام کارهای دیگران هستم، وقت کمی برای خودم می ماند</td>
+            <td><input type="radio" name="q47" value="1"></td>
+            <td><input type="radio" name="q47" value="2"></td>
+            <td><input type="radio" name="q47" value="3"></td>
+            <td><input type="radio" name="q47" value="4"></td>
+            <td><input type="radio" name="q47" value="5"></td>
+            <td><input type="radio" name="q47" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>48- برای من خیلی سخت است که صمیمی و بی تکلیف رفتار کنم</td>
+            <td><input type="radio" name="q48" value="1"></td>
+            <td><input type="radio" name="q48" value="2"></td>
+            <td><input type="radio" name="q48" value="3"></td>
+            <td><input type="radio" name="q48" value="4"></td>
+            <td><input type="radio" name="q48" value="5"></td>
+            <td><input type="radio" name="q48" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>49- من باید به تمام مسئولیت هایم عمل کنم</td>
+            <td><input type="radio" name="q49" value="1"></td>
+            <td><input type="radio" name="q49" value="2"></td>
+            <td><input type="radio" name="q49" value="3"></td>
+            <td><input type="radio" name="q49" value="4"></td>
+            <td><input type="radio" name="q49" value="5"></td>
+            <td><input type="radio" name="q49" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>50- از اینکه مرا محدود کنند یا جلوی کار مرا بگیرند به شدت متنفرم</td>
+            <td><input type="radio" name="q50" value="1"></td>
+            <td><input type="radio" name="q50" value="2"></td>
+            <td><input type="radio" name="q50" value="3"></td>
+            <td><input type="radio" name="q50" value="4"></td>
+            <td><input type="radio" name="q50" value="5"></td>
+            <td><input type="radio" name="q50" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>51- خیلی برای من سخت است که به خاطر دستیابی به هدف بلند مدت، از سر خیر رضایتمندی فوری بگذرم</td>
+            <td><input type="radio" name="q51" value="1"></td>
+            <td><input type="radio" name="q51" value="2"></td>
+            <td><input type="radio" name="q51" value="3"></td>
+            <td><input type="radio" name="q51" value="4"></td>
+            <td><input type="radio" name="q51" value="5"></td>
+            <td><input type="radio" name="q51" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>52- اگ نتوانم توجه دیگران را جلب کنم، احساس میکنم آدم کم اهمیتی هستم</td>
+            <td><input type="radio" name="q52" value="1"></td>
+            <td><input type="radio" name="q52" value="2"></td>
+            <td><input type="radio" name="q52" value="3"></td>
+            <td><input type="radio" name="q52" value="4"></td>
+            <td><input type="radio" name="q52" value="5"></td>
+            <td><input type="radio" name="q52" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>53- خیلی نمیتوانم در کارها دقت کنم چون تقریبا همیشه کارها غلط از آب در می آید</td>
+            <td><input type="radio" name="q53" value="1"></td>
+            <td><input type="radio" name="q53" value="2"></td>
+            <td><input type="radio" name="q53" value="3"></td>
+            <td><input type="radio" name="q53" value="4"></td>
+            <td><input type="radio" name="q53" value="5"></td>
+            <td><input type="radio" name="q53" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>54- اگر اشتباه کنم باید تنبیه شوم</td>
+            <td><input type="radio" name="q54" value="1"></td>
+            <td><input type="radio" name="q54" value="2"></td>
+            <td><input type="radio" name="q54" value="3"></td>
+            <td><input type="radio" name="q54" value="4"></td>
+            <td><input type="radio" name="q54" value="5"></td>
+            <td><input type="radio" name="q54" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>55- در اغلب اوقات زندگی کسی را نداشته ام که به حرف دل من گوش دهند، مرا بفهمند یا اینکه احساسها و نیازهای واقعی مرا درک کنند</td>
+            <td><input type="radio" name="q55" value="1"></td>
+            <td><input type="radio" name="q55" value="2"></td>
+            <td><input type="radio" name="q55" value="3"></td>
+            <td><input type="radio" name="q55" value="4"></td>
+            <td><input type="radio" name="q55" value="5"></td>
+            <td><input type="radio" name="q55" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>56- وقتی احساس میکنم کسی برایم مهم است از من دوری میکند،مایوس میشوم</td>
+            <td><input type="radio" name="q56" value="1"></td>
+            <td><input type="radio" name="q56" value="2"></td>
+            <td><input type="radio" name="q56" value="3"></td>
+            <td><input type="radio" name="q56" value="4"></td>
+            <td><input type="radio" name="q56" value="5"></td>
+            <td><input type="radio" name="q56" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>57- نسبت به انگیزه های دیگران سوءظن شدید دارم</td>
+            <td><input type="radio" name="q57" value="1"></td>
+            <td><input type="radio" name="q57" value="2"></td>
+            <td><input type="radio" name="q57" value="3"></td>
+            <td><input type="radio" name="q57" value="4"></td>
+            <td><input type="radio" name="q57" value="5"></td>
+            <td><input type="radio" name="q57" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>58- احساس میکنم با مردم بی گانه ام</td>
+            <td><input type="radio" name="q58" value="1"></td>
+            <td><input type="radio" name="q58" value="2"></td>
+            <td><input type="radio" name="q58" value="3"></td>
+            <td><input type="radio" name="q58" value="4"></td>
+            <td><input type="radio" name="q58" value="5"></td>
+            <td><input type="radio" name="q58" value="6"></td>
+        </tr>
+
+
+
+
+                <tr>
+            <td>59- احساس میکنم هیچکس مرا دوست ندارد</td>
+            <td><input type="radio" name="q59" value="1"></td>
+            <td><input type="radio" name="q59" value="2"></td>
+            <td><input type="radio" name="q59" value="3"></td>
+            <td><input type="radio" name="q59" value="4"></td>
+            <td><input type="radio" name="q59" value="5"></td>
+            <td><input type="radio" name="q59" value="6"></td>
+        </tr>
+
+
+
+
+                <tr>
+            <td>60- اکثر افراد در کار یا تحصیل از من با استعداد ترند</td>
+            <td><input type="radio" name="q60" value="1"></td>
+            <td><input type="radio" name="q60" value="2"></td>
+            <td><input type="radio" name="q60" value="3"></td>
+            <td><input type="radio" name="q60" value="4"></td>
+            <td><input type="radio" name="q60" value="5"></td>
+            <td><input type="radio" name="q60" value="6"></td>
+        </tr>
+
+
+
+
+                <tr>
+            <td>61- اگ به قضاوتتهای خودم در موقعیت های روزمره زندگی اعتماد کنم تصمیم های اشتباهی میگیرم</td>
+            <td><input type="radio" name="q61" value="1"></td>
+            <td><input type="radio" name="q61" value="2"></td>
+            <td><input type="radio" name="q61" value="3"></td>
+            <td><input type="radio" name="q61" value="4"></td>
+            <td><input type="radio" name="q61" value="5"></td>
+            <td><input type="radio" name="q61" value="6"></td>
+        </tr>
+
+
+
+
+
+                <tr>
+            <td>62- نگرانم که کل سرمایه ام را از دست بدهم و فقیر و بی خانمان شوم</td>
+            <td><input type="radio" name="q62" value="1"></td>
+            <td><input type="radio" name="q62" value="2"></td>
+            <td><input type="radio" name="q62" value="3"></td>
+            <td><input type="radio" name="q62" value="4"></td>
+            <td><input type="radio" name="q62" value="5"></td>
+            <td><input type="radio" name="q62" value="6"></td>
+        </tr>
+
+
+
+
+                <tr>
+            <td>63- اغلم احساس میکنم انگار سایه سنگین والدینم دائم بر سر من است، به نحوی که نمیتوانم یک زندگی جداگانه ای برای خودم داشته باشم</td>
+            <td><input type="radio" name="q63" value="1"></td>
+            <td><input type="radio" name="q63" value="2"></td>
+            <td><input type="radio" name="q63" value="3"></td>
+            <td><input type="radio" name="q63" value="4"></td>
+            <td><input type="radio" name="q63" value="5"></td>
+            <td><input type="radio" name="q63" value="6"></td>
+        </tr>
+
+
+
+
+                <tr>
+            <td>64- همیشه به دیگران اجازه میدهم که به جای من تصمیم بگیرند چون واقعا نمیدانم چی میخواهم</td>
+            <td><input type="radio" name="q64" value="1"></td>
+            <td><input type="radio" name="q64" value="2"></td>
+            <td><input type="radio" name="q64" value="3"></td>
+            <td><input type="radio" name="q64" value="4"></td>
+            <td><input type="radio" name="q64" value="5"></td>
+            <td><input type="radio" name="q64" value="6"></td>
+        </tr>
+
+
+                <tr>
+            <td>65- همیشه به درد دل دیگران گوش داده ام</td>
+            <td><input type="radio" name="q65" value="1"></td>
+            <td><input type="radio" name="q65" value="2"></td>
+            <td><input type="radio" name="q65" value="3"></td>
+            <td><input type="radio" name="q65" value="4"></td>
+            <td><input type="radio" name="q65" value="5"></td>
+            <td><input type="radio" name="q65" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>66- آنقدر خودم را کنترل میکنم که مردم فکر میکنند آدم بی احساسی هستم</td>
+            <td><input type="radio" name="q66" value="1"></td>
+            <td><input type="radio" name="q66" value="2"></td>
+            <td><input type="radio" name="q66" value="3"></td>
+            <td><input type="radio" name="q66" value="4"></td>
+            <td><input type="radio" name="q66" value="5"></td>
+            <td><input type="radio" name="q66" value="6"></td>
+        </tr>
+
+
+
+
+                <tr>
+            <td>67- احساس میکنم برای پیشرفت و دستیابی به خواسته هایم،همواره تحت فشار هستم</td>
+            <td><input type="radio" name="q67" value="1"></td>
+            <td><input type="radio" name="q67" value="2"></td>
+            <td><input type="radio" name="q67" value="3"></td>
+            <td><input type="radio" name="q67" value="4"></td>
+            <td><input type="radio" name="q67" value="5"></td>
+            <td><input type="radio" name="q67" value="6"></td>
+        </tr>
+
+
+
+
+
+                <tr>
+            <td>68- احساس میکنم  نباید از قوانین و قراردادهای بهنجاری که مردم تابع آنها هستند اطاعت کنم</td>
+            <td><input type="radio" name="q68" value="1"></td>
+            <td><input type="radio" name="q68" value="2"></td>
+            <td><input type="radio" name="q68" value="3"></td>
+            <td><input type="radio" name="q68" value="4"></td>
+            <td><input type="radio" name="q68" value="5"></td>
+            <td><input type="radio" name="q68" value="6"></td>
+        </tr>
+
+
+
+
+
+                <tr>
+            <td>69- نمیتوانم خودم را مجبور کنم که کارهای بدون لذت را انجام دهم، حتی اگر بدانم این کارهای نتایج خوبی به دنبال دارد</td>
+            <td><input type="radio" name="q69" value="1"></td>
+            <td><input type="radio" name="q69" value="2"></td>
+            <td><input type="radio" name="q69" value="3"></td>
+            <td><input type="radio" name="q69" value="4"></td>
+            <td><input type="radio" name="q69" value="5"></td>
+            <td><input type="radio" name="q69" value="6"></td>
+        </tr>
+
+
+
+
+                <tr>
+            <td>70- در هر جمع یا اجتماعی به دنبال دریافت توجه و تحسین دیگران هستم</td>
+            <td><input type="radio" name="q70" value="1"></td>
+            <td><input type="radio" name="q70" value="2"></td>
+            <td><input type="radio" name="q70" value="3"></td>
+            <td><input type="radio" name="q70" value="4"></td>
+            <td><input type="radio" name="q70" value="5"></td>
+            <td><input type="radio" name="q70" value="6"></td>
+        </tr>
+
+
+
+
+                <tr>
+            <td>متن</td>
+            <td><input type="radio" name="q" value="1"></td>
+            <td><input type="radio" name="q" value="2"></td>
+            <td><input type="radio" name="q" value="3"></td>
+            <td><input type="radio" name="q" value="4"></td>
+            <td><input type="radio" name="q" value="5"></td>
+            <td><input type="radio" name="q" value="6"></td>
+        </tr>
+
+
+
+
+                <tr>
+            <td>71- مهم نیست که چقدر سخت کوش باشم، نگرانم که تمام سرمایه مالی ام را بر باد فنا بدهم</td>
+            <td><input type="radio" name="q71" value="1"></td>
+            <td><input type="radio" name="q71" value="2"></td>
+            <td><input type="radio" name="q71" value="3"></td>
+            <td><input type="radio" name="q71" value="4"></td>
+            <td><input type="radio" name="q71" value="5"></td>
+            <td><input type="radio" name="q71" value="6"></td>
+        </tr>
+
+
+
+
+                <tr>
+            <td>متن</td>
+            <td><input type="radio" name="q" value="1"></td>
+            <td><input type="radio" name="q" value="2"></td>
+            <td><input type="radio" name="q" value="3"></td>
+            <td><input type="radio" name="q" value="4"></td>
+            <td><input type="radio" name="q" value="5"></td>
+            <td><input type="radio" name="q" value="6"></td>
+        </tr>
+
+
+
+
+
+                <tr>
+            <td>72- دلیل اشتباه من مهم نیست، زمانی مرتب اشتباه میشوم باید جریمه شوم</td>
+            <td><input type="radio" name="q72" value="1"></td>
+            <td><input type="radio" name="q72" value="2"></td>
+            <td><input type="radio" name="q72" value="3"></td>
+            <td><input type="radio" name="q72" value="4"></td>
+            <td><input type="radio" name="q72" value="5"></td>
+            <td><input type="radio" name="q72" value="6"></td>
+        </tr>
+
+
+
+
+
+
+                <tr>
+            <td>73- وقتی نمیدانستم کاری را چگونه انجام بدهم، به ندرت شخصی پیدا میشد که مرا نصیحت یا راهنمایی کند</td>
+            <td><input type="radio" name="q73" value="1"></td>
+            <td><input type="radio" name="q73" value="2"></td>
+            <td><input type="radio" name="q73" value="3"></td>
+            <td><input type="radio" name="q73" value="4"></td>
+            <td><input type="radio" name="q73" value="5"></td>
+            <td><input type="radio" name="q73" value="6"></td>
+        </tr>
+
+
+
+
+
+                <tr>
+            <td>74- برخی اوقات آنقد نگران آن هستم که دیگران مرا ترک کنند که آنها را از خودم دور میکنم</td>
+            <td><input type="radio" name="q74" value="1"></td>
+            <td><input type="radio" name="q74" value="2"></td>
+            <td><input type="radio" name="q74" value="3"></td>
+            <td><input type="radio" name="q74" value="4"></td>
+            <td><input type="radio" name="q74" value="5"></td>
+            <td><input type="radio" name="q74" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>75- معمولا به طور جدی به انگیزه های نهایی مردم فکر میکنم</td>
+            <td><input type="radio" name="q75" value="1"></td>
+            <td><input type="radio" name="q75" value="2"></td>
+            <td><input type="radio" name="q75" value="3"></td>
+            <td><input type="radio" name="q75" value="4"></td>
+            <td><input type="radio" name="q75" value="5"></td>
+            <td><input type="radio" name="q75" value="6"></td>
+        </tr>
+
+
+
+
+                <tr>
+            <td>76- همیشه احساس میکنم در جمع، جایی ندارم</td>
+            <td><input type="radio" name="q76" value="1"></td>
+            <td><input type="radio" name="q76" value="2"></td>
+            <td><input type="radio" name="q76" value="3"></td>
+            <td><input type="radio" name="q76" value="4"></td>
+            <td><input type="radio" name="q76" value="5"></td>
+            <td><input type="radio" name="q76" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>77- در بسیاری از جنبه ها چنان شخصیت پر از عیب و ایرادی دارم که نمیتوانم در کنار دیگران راحت باشم</td>
+            <td><input type="radio" name="q77" value="1"></td>
+            <td><input type="radio" name="q77" value="2"></td>
+            <td><input type="radio" name="q77" value="3"></td>
+            <td><input type="radio" name="q77" value="4"></td>
+            <td><input type="radio" name="q77" value="5"></td>
+            <td><input type="radio" name="q77" value="6"></td>
+        </tr>
+
+
+
+
+                <tr>
+            <td>78- در کار یا تحصیل مثل بقیه باهوش نیستم</td>
+            <td><input type="radio" name="q78" value="1"></td>
+            <td><input type="radio" name="q78" value="2"></td>
+            <td><input type="radio" name="q78" value="3"></td>
+            <td><input type="radio" name="q78" value="4"></td>
+            <td><input type="radio" name="q78" value="5"></td>
+            <td><input type="radio" name="q78" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>79- نمیتوانم به توانایی های خودم برای حل مشکلا روزمره اعتماد کنم</td>
+            <td><input type="radio" name="q79" value="1"></td>
+            <td><input type="radio" name="q79" value="2"></td>
+            <td><input type="radio" name="q79" value="3"></td>
+            <td><input type="radio" name="q79" value="4"></td>
+            <td><input type="radio" name="q79" value="5"></td>
+            <td><input type="radio" name="q79" value="6"></td>
+        </tr>
+
+
+
+
+                <tr>
+            <td>80- نگرانم به بیماری خطرناکی مبتلا شوم حتی وقتی که پزشک هیچگونه علامت خطری تشخیص نداده است</td>
+            <td><input type="radio" name="q80" value="1"></td>
+            <td><input type="radio" name="q80" value="2"></td>
+            <td><input type="radio" name="q80" value="3"></td>
+            <td><input type="radio" name="q80" value="4"></td>
+            <td><input type="radio" name="q80" value="5"></td>
+            <td><input type="radio" name="q80" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>81- اغلب احساس میکنم هویت جداگانه ای از والدینم یا همسرم ندارم</td>
+            <td><input type="radio" name="q81" value="1"></td>
+            <td><input type="radio" name="q81" value="2"></td>
+            <td><input type="radio" name="q81" value="3"></td>
+            <td><input type="radio" name="q81" value="4"></td>
+            <td><input type="radio" name="q81" value="5"></td>
+            <td><input type="radio" name="q81" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>82- خیلی برای من مشکل است که از دیگران تقاضا کنم که حقوقم را رعایت و احساساتم را درک کنند</td>
+            <td><input type="radio" name="q82" value="1"></td>
+            <td><input type="radio" name="q82" value="2"></td>
+            <td><input type="radio" name="q82" value="3"></td>
+            <td><input type="radio" name="q82" value="4"></td>
+            <td><input type="radio" name="q82" value="5"></td>
+            <td><input type="radio" name="q82" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>83- اطرافیان معتقدند که من برای رفع نیازهای دیگران زیاد تلاش میکنم ولی برای خودم کاری نمیکنم</td>
+            <td><input type="radio" name="q83" value="1"></td>
+            <td><input type="radio" name="q83" value="2"></td>
+            <td><input type="radio" name="q83" value="3"></td>
+            <td><input type="radio" name="q83" value="4"></td>
+            <td><input type="radio" name="q83" value="5"></td>
+            <td><input type="radio" name="q83" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>84- از نظر دیگران من آدم عصبی و ناراحتی هستم</td>
+            <td><input type="radio" name="q84" value="1"></td>
+            <td><input type="radio" name="q84" value="2"></td>
+            <td><input type="radio" name="q84" value="3"></td>
+            <td><input type="radio" name="q84" value="4"></td>
+            <td><input type="radio" name="q84" value="5"></td>
+            <td><input type="radio" name="q84" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>85- وقتی کاری را اشتباه انجام میدهم نمیتوانم خودم را ببخشم یا دست به بهانه تراشی بزنم</td>
+            <td><input type="radio" name="q85" value="1"></td>
+            <td><input type="radio" name="q85" value="2"></td>
+            <td><input type="radio" name="q85" value="3"></td>
+            <td><input type="radio" name="q85" value="4"></td>
+            <td><input type="radio" name="q85" value="5"></td>
+            <td><input type="radio" name="q85" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>86- احساس میکنم کارها و خواسته های من ارزشمندتر از کارها و خواسته های دیگران است</td>
+            <td><input type="radio" name="q86" value="1"></td>
+            <td><input type="radio" name="q86" value="2"></td>
+            <td><input type="radio" name="q86" value="3"></td>
+            <td><input type="radio" name="q86" value="4"></td>
+            <td><input type="radio" name="q86" value="5"></td>
+            <td><input type="radio" name="q86" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>87- به ندرت توانسته ام به تصمیم ها و راه حل هایم پایبند باشم</td>
+            <td><input type="radio" name="q87" value="1"></td>
+            <td><input type="radio" name="q87" value="2"></td>
+            <td><input type="radio" name="q87" value="3"></td>
+            <td><input type="radio" name="q87" value="4"></td>
+            <td><input type="radio" name="q87" value="5"></td>
+            <td><input type="radio" name="q87" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>88- برا اینکه احساس کنم آدم ارزشمندی هستم نیازمند تایید، تحسین و تمجید زیاد دیگران هستم</td>
+            <td><input type="radio" name="q88" value="1"></td>
+            <td><input type="radio" name="q88" value="2"></td>
+            <td><input type="radio" name="q88" value="3"></td>
+            <td><input type="radio" name="q88" value="4"></td>
+            <td><input type="radio" name="q88" value="5"></td>
+            <td><input type="radio" name="q88" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>89- نگرانم که مبادا یک تصمیم اشتباه به فاجه ای تمام عیار منجر شود</td>
+            <td><input type="radio" name="q89" value="1"></td>
+            <td><input type="radio" name="q89" value="2"></td>
+            <td><input type="radio" name="q89" value="3"></td>
+            <td><input type="radio" name="q89" value="4"></td>
+            <td><input type="radio" name="q89" value="5"></td>
+            <td><input type="radio" name="q89" value="6"></td>
+        </tr>
+
+
+
+                <tr>
+            <td>90- آدم بدی هستم که لایق تنبیه است.</td>
+            <td><input type="radio" name="q90" value="1"></td>
+            <td><input type="radio" name="q90" value="2"></td>
+            <td><input type="radio" name="q90" value="3"></td>
+            <td><input type="radio" name="q90" value="4"></td>
+            <td><input type="radio" name="q90" value="5"></td>
+            <td><input type="radio" name="q90" value="6"></td>
+        </tr>
+
+
+
+
+
+
+
+
+
+    </table>
+
+
+
+  <!-- دکمه چاپ -->
+    <div class="print-button">
+        <button onclick="window.print()">خروجی‌گیری / چاپ</button>
+    </div>
+
+
+
+                <div class="add-row-button" style="text-align:center; margin-top: 20px;">
+        <button onclick="addQuestionRow()">➕ افزودن سوال جدید</button>
+</div>
+
+       <script>
+let questionCounter = 90; // چون ۷ سوال اول قبلاً داریم
+
+function addQuestionRow() {
+    questionCounter++;
+
+    const table = document.querySelector("table");
+    const newRow = document.createElement("tr");
+
+    // ساختن سلول اول (سوال)
+    const questionCell = document.createElement("td");
+    const textarea = document.createElement("textarea");
+    textarea.className = "editable-question";
+    textarea.textContent = `${questionCounter}- `;
+    questionCell.appendChild(textarea);
+    newRow.appendChild(questionCell);
+
+    // اضافه کردن گزینه‌های رادیویی
+    for (let i = 1; i <= 6; i++) {
+        const cell = document.createElement("td");
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = `q${questionCounter}`;
+        radio.value = i;
+        cell.appendChild(radio);
+        newRow.appendChild(cell);
+    }
+
+    table.appendChild(newRow);
+
+    // فعال‌سازی رنگ‌بندی در صورت ویرایش
+    textarea.addEventListener('input', () => {
+        textarea.classList.add('modified');
+    });
+}
+</script>
+
+
+
+
+
+</body>
+</html>
